@@ -6,15 +6,17 @@
 // - If the user is not over 25 and has a bad driving record, they need to have someone else sign for the rental
 
 
-var goodDrivingRecord = false;
-var age = 19;
+var goodDrivingRecord = true;
+var age = 12;
 
-if(goodDrivingRecord === true && age > 25) {
-    console.log("You should get a discount on the car rental");
+
+if(age >= 25 && goodDrivingRecord === true) {
+    console.log("You get a discount!");
 }
-else if(goodDrivingRecord === true || age > 25) {
-    console.log("You will pay full price")
+else if(age >= 25 || goodDrivingRecord === false) {
+    console.log("You pay full price.");
 }
-else if(age < 25 && goodDrivingRecord !== true) {
-    console.log("You need to have someone else sign for the rental");
+else {
+    console.log("You need someone else to sign for the rental.")
 }
+
